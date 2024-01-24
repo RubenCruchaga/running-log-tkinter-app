@@ -7,11 +7,20 @@ def draw():
         d1=float(txt1.get())
         d2=float(txt3.get())
         d3=float(txt3.get())
-        d4=float(txt4.get())
-        d5=float(txt5.get())
-        d6=float(txt6.get())
-        d7=float(txt7.get())
-         
+        #d4=float(txt4.get())
+        #d5=float(txt5.get())
+        #d6=float(txt6.get())
+        #d7=float(txt7.get())
+        #gettinmg the varivle to the right size
+        d1=350-d1
+        d2=350-d2
+        d3=350-d3
+        #out line
+        canvas.create_line(0,350,500,350)# work on this
+        #the bar
+        canvas.create_rectangle(10,d1,50,500)
+        canvas.create_rectangle(60,d2,110,500)
+        canvas.create_rectangle(120,d3,170,500)
     except ValueError:
         lblerror.config(text="ERROR only numbers")
 def clear():
@@ -41,11 +50,11 @@ txt6 = tk.Entry(window)
 txt7 = tk.Label(window)
 
 #bottens
-bnt = tk.Button(window,text="DRAW?", commans=draw)
+bnt = tk.Button(window,text="DRAW?", command=draw)
 bntClear = tk.Button(window,text="Clear",command=clear)
 
 #canvas
-canvas = tk.Canvas(window)
+canvas = tk.Canvas(window,width=500,height=350)
 
 
 #GUI 

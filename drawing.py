@@ -58,6 +58,8 @@ window = tk.Tk()
 window.title('Running bar graph')
 window.geometry('800x800') 
 window.config(bg = "#6AE1E0")
+window.iconbitmap('runningMan.ico')
+
 #lables
 lbl1 = tk.Label(window, text="Day 1:",bg='#E56A6A')
 lbl2 = tk.Label(window, text="Day 2:",bg='#E5A022')

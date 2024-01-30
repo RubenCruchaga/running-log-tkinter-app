@@ -28,9 +28,6 @@ def draw():
         d5=350-d5
         d6=350-d6
         d7=350-d7
-        #out line
-        canvas.create_line(2,1,2,351)
-        canvas.create_line(0,351,500,351)
         #draws the br graph
         canvas.create_rectangle(10,d1,50,500, fill='#E56A6A')
         canvas.create_rectangle(60,d2,100,500,fill='#E5A022')
@@ -40,6 +37,9 @@ def draw():
         canvas.create_rectangle(260,d6,300,500,fill="#934ABA")
         canvas.create_rectangle(310,d7,350,500,fill="#D340B2")
         #will make teh tick marcks every 50 pixles/5 miles
+        #out line
+        canvas.create_line(2,1,2,351)
+        canvas.create_line(0,349,500,349)
         x1=0
         y1=0
         x2=10
@@ -56,7 +56,7 @@ def draw():
 #window properties
 window = tk.Tk()
 window.title('Running bar graph')
-window.geometry('800x800') 
+window.geometry('600x700') 
 window.config(bg = "#6AE1E0")
 window.iconbitmap('runningMan.ico')
 
